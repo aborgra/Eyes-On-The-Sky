@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__View {
+  flex-basis: 20%;
+}
+
+.content__Photo {
+  flex-basis: 20%;
+}
+
+.content__Favorites {
+  flex-basis: 20%;
+}
