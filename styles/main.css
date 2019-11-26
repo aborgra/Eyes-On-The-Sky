@@ -1,3 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  background-image: url("https://tse2.mm.bing.net/th?id=OIP.ZUsxSwgn02tok98GLd6SqgHaEo&pid=Api&P=0&w=260&h=163");
+  height: 50px;
+  color: white;
+}
+
+a {
+  color: white;
+  padding: 8pt;
+}
+.nav__links {
+  align-content: flex-start;
+  flex-basis: 75%;
+  color: white;
+  padding: 8pt;
+}
+.nav__search {
+  align-content: flex-end;
+  flex-basis: 40%;
+  padding: 8pt;
+}
+
+header {
+  text-align: center;
+}
 .content {
   display: flex;
   flex-direction: column;
