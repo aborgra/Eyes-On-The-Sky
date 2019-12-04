@@ -1,3 +1,3 @@
-import { useAPIData } from "./fetchAPI.js";
+import DailyPhotoComponent from "./DailyPhotoComponent.js";
 
-useAPIData();
+DailyPhotoComponent();
