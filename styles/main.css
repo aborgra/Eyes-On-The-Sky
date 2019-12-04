@@ -41,9 +41,17 @@ header {
 .content__Photo {
   flex-basis: 50%;
   border-bottom: 1pt solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .content__Favorites {
   flex-basis: 50%;
   border-bottom: 1pt solid black;
+}
+
+.dailyPhoto {
+  height: 400px;
+  width: 600px;
+  margin: 10pt;
 }
