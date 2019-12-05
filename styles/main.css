@@ -55,3 +55,22 @@ header {
   width: 600px;
   margin: 10pt;
 }
+
+.marsPhoto_img {
+  height: 100px;
+  width: 100px;
+}
+
+.content__View {
+  flex-wrap: wrap;
+}
+
+.marsPhoto {
+  margin: 5pt;
+  flex-basis: 20%;
+}
+
+.marsPhotosCollection {
+  display: flex;
+  flex-wrap: wrap;
+}

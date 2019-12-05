@@ -15,23 +15,4 @@ export const getDailyPhotos = () => {
     .then(response => response.json())
     .then(res => dailyPhoto = res);
 
-  // .then(parsedDailyPhotos => {
-  //   console.log(parsedDailyPhotos);
-  //   dailyPhotos = parsedDailyPhotos.slice();
-};
-
-// {
-//   img_src: "img_src",
-//   earth_date: "earth_date",
-//   camera: {
-//     name: "name"
-//   }
-// };
-
-// export const usePhotos = () => {
-//   return photos;
-// };
-/*
-    Export a function that lets other components have
-    access to the data
-*/
+  } 
