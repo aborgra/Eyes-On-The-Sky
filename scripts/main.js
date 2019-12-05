@@ -1,3 +1,5 @@
-import DailyPhotoComponent from "./DailyPhotoComponent.js";
+import { getDailyPhotos } from "./photoOfTheDay/PhotoDataProvider.js";
 
-DailyPhotoComponent();
+import DailyPhotoListComponent from "./photoOfTheDay/PhotoList.js";
+
+getDailyPhotos().then(DailyPhotoListComponent);
