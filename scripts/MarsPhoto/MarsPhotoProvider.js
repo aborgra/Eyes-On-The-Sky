@@ -6,9 +6,9 @@ export const useMarsPhotos = () => {
 // const apiurl = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key="
 // const key = "adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw"
 
-export const getMarsPhotos = () => {
+export const getCuriosityPhotos = (date) => {
   return fetch(
-    "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw"
+    `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw`
   )
     .then(response => response.json())
     .then((parsedMarsPhotos) => {
@@ -18,9 +18,9 @@ export const getMarsPhotos = () => {
     });
 };
 
-export const getOpportunityPhotos = () => {
+export const getOpportunityPhotos = (date) => {
   return fetch(
-    "https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw"
+    `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=${date}&api_key=adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw`
   )
     .then(response => response.json())
     .then((parsedMarsPhotos) => {
@@ -30,9 +30,9 @@ export const getOpportunityPhotos = () => {
     })
 }
 
-export const getSpiritPhotos = () => {
+export const getSpiritPhotos = (date) => {
   return fetch(
-    "https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw"
+    `https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=${date}&api_key=adCtYxYVJtwnphsjnVwbx3GbbSf54V9HKlnED0Rw`
   )
     .then(response => response.json())
     .then((parsedMarsPhotos) => {

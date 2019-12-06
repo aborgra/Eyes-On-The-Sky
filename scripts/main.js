@@ -1,11 +1,10 @@
 import { getDailyPhotos } from "./photoOfTheDay/PhotoDataProvider.js";
 import DailyPhotoListComponent from "./photoOfTheDay/PhotoList.js";
-import { getMarsPhotos, getOpportunityPhotos, getSpiritPhotos } from "./MarsPhoto/MarsPhotoProvider.js";
-import MarsPhotoListComponent from "./MarsPhoto/MarsPhotoList.js";
 
+import {setDateEventListener} from "./RefreshRoverPhotosByDate.js";
+
+// Initializing event listener and populating default search data
+setDateEventListener()
+// Gets daily photo form API
 getDailyPhotos().then(DailyPhotoListComponent);
 
-getMarsPhotos()
-.then(() => getOpportunityPhotos())
-.then(() => getSpiritPhotos())
-.then(() => MarsPhotoListComponent())
