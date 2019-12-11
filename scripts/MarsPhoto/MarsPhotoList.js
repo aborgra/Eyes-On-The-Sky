@@ -1,19 +1,32 @@
 import MarsPhotoComponent from "./MarsPhoto.js";
-import { useMarsPhotos } from "./MarsPhotoProvider.js";
+import { useMarsPhotos, getRoverPhotos } from "./MarsPhotoProvider.js";
 
-const MarsPhotoListComponent = () => {
 const contentElement = document.querySelector(".content__View");
 const marsPhotos = useMarsPhotos()
+const eventHub = document.querySelector(".container");
 
-contentElement.innerHTML += `
+const MarsPhotoListComponent = () => {
+
+  contentElement.innerHTML = `
 <section class="marsPhotosCollection">
-${marsPhotos
-  .map(singlePhoto => {
-    return MarsPhotoComponent(singlePhoto);
-  })
-  .join("")}
+${marsPhotos.map(photo => {
+  return MarsPhotoComponent(photo)
+}).join(" ")}
   </section>
 `
-}
 
-export default MarsPhotoListComponent;
+  eventHub.addEventListener("searchButtonClicked", event => {
+    contentElement.innerHTML = ""
+    // let newPhotos = {}
+
+    getRoverPhotos(event.detail.date, event.detail.rover)
+      .then(() => {
+        contentElement.innerHTML = `
+          <section class="marsPhotosCollection">
+          ${marsPhotos.map(photo => {
+                  return MarsPhotoComponent(photo)
+                }).join(" ")}
+            </section>`
+      })
+    })}
+    export default MarsPhotoListComponent;

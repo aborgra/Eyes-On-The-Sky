@@ -1,3 +1,4 @@
+
 const MarsPhotoComponent = marsPhoto => {
   return `
   

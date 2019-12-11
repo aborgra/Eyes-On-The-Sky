@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 
-<body>
+<body class="container">
   <nav class="nav">
     <div class="nav__links">
       <a href="#viewFromMars">View from Mars</a>
@@ -17,8 +17,9 @@
       <a href="#myFavorites">My Favorites</a>
     </div>
     <div class="nav__search">
-      <label class="nav__label" for="searchDate">Enter Search Date: </label>
+      <label class="nav__label" for="searchDate">Enter Search: </label>
       <input class="nav__dateSearch" type="date" name="searchDate" id="searchDate">
+      <input class="nav__roverSearch" type="text" name="searchRover" id="searchRover" default="Enter Rover">
       <button class="button" id="search__button">Search</button>
     </div>
   </nav>
@@ -26,27 +27,27 @@
   <header>
     <h1>Eyes on the Sky</h1>
   </header>
+  <main >
+    <section class="content">
 
-  <section class="content">
+      <article class="content__Photo" id="photoOfTheDay">
+        <h4>Popular Photo of the Day</h4>
+      </article>
+      <hr>
+      <br>
 
-    <article class="content__Photo" id="photoOfTheDay">
-      <h4>Popular Photo of the Day</h4>
-    </article>
-    <hr>
-    <br>
+      <article class="content__View" id="viewFromMars">
+        <h4>View From Mars Section</h4>
+      </article>
+      <hr>
+      <br>
 
-    <article class="content__View" id="viewFromMars">
-      <h4>View From Mars Section</h4>
-    </article>
-    <hr>
-    <br>
-
-    <article class="content__Favorites" id="myFavorites">
-      <h4>My Favorites</h4>
-    </article>
-    <hr>
-  </section>
-
+      <article class="content__Favorites" id="myFavorites">
+        <h4>My Favorites</h4>
+      </article>
+      <hr>
+    </section>
+  </main>
   <script src="/scripts/main.js" type="module"></script>
 </body>
 
